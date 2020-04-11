@@ -1,6 +1,7 @@
 package com.example.examplemod;
 
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -27,5 +28,9 @@ public class ExampleMod
     {
         // some example code
         logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+
+        Item item = new Item();
+        item.setRegistryName("test_weapon");
+        logger.info("NEW ITEM >> {}", item.getRegistryName());
     }
 }
