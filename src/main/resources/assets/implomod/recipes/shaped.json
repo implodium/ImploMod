@@ -1,20 +1,24 @@
 {
+  "_comment": [
+    "Upgrade an Iron Helment to a Golden Helmet while preserving its damage",
+    "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/modification-development/2513998-help-needed-creating-crafting-recipe-with-damaged"
+  ],
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "iii",
-    " i ",
-    "III"
+    "GGG",
+    "GHG",
+    "GGG"
   ],
   "key": {
-    "I": {
-      "item": "minecraft:iron_block"
+    "G": {
+      "item": "minecraft:gold_block"
     },
-    "i": {
-      "item": "minecraft:iron_ingot"
+    "H": {
+      "item": "minecraft:iron_helmet",
+      "data": 32767
     }
   },
   "result": {
-    "item": "minecraft:anvil",
-    "data": 0
+    "item": "minecraft:golden_helmet"
   }
 }
