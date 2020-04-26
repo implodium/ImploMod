@@ -1,5 +1,6 @@
 package com.implodium.implomod;
 
+import com.implodium.implomod.blocks.InfiniteWater;
 import com.implodium.implomod.proxy.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -35,6 +36,7 @@ public class ImploMod {
     @EventHandler
     public void preinit(FMLPreInitializationEvent event) {
         proxy.preinit(event);
+        preInitBlock(new InfiniteWater());
     }
 
     @EventHandler
