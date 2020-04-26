@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "#O#",
-    "O O",
+    "OGO",
     "#O#"
   ],
   "key": {
@@ -35,7 +35,10 @@
         "item": "minecraft:planks",
         "data": 5
       }
-    ]
+    ],
+    "G": {
+      "item": "minecraft:glass"
+    }
   },
   "result": {
     "item": "minecraft:obsidian",
