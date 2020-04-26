@@ -59,8 +59,8 @@ public class ImploMod {
         ForgeRegistries.ITEMS.register(itemBlock);
 
         ModelResourceLocation modelResourceLocation = new ModelResourceLocation(
-                ImploConstants.MODID + ":" + block.getRegistryName(),
-                "normal"
+                block.getRegistryName(),
+                "inventory"
         );
 
         ModelLoader.setCustomModelResourceLocation(itemBlock, 0, modelResourceLocation);

@@ -1,9 +1,9 @@
 {
-	"credit": "Made with Blockbench",
+	"parent": "block/cube",
 	"textures": {
-		"0": "implomod:blocks/infinite_water",
+		"0": "implomod:block/infinite_water",
 		"1": "blocks/water_still",
-		"particle": "implomod:blocks/infinite_water"
+		"particle": "implomod:block/infinite_water"
 	},
 	"elements": [
 		{

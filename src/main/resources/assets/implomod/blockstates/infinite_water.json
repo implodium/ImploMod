@@ -1,5 +1,7 @@
 {
     "variants": {
-        "normal": { "model": "implomod:infinite_water" }
+        "level=0": { "model": "implomod:infinite_water" },
+        "level=1": { "model": "implomod:infinite_water1" },
+        "level=2": { "model": "implomod:infinite_water2" }
     }
 }
