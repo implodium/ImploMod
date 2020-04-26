@@ -1,5 +1,6 @@
 package com.implodium.implomod.blocks;
 
+import com.implodium.implomod.ImploMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -29,6 +30,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class InfiniteWater extends Block {
@@ -64,14 +66,12 @@ public class InfiniteWater extends Block {
         return EnumBlockRenderType.MODEL;
     }
 
-    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
-        int i = (Integer)state.getValue(LEVEL);
-        float f = (float)pos.getY() + (6.0F + (float)(3 * i)) / 16.0F;
-        if (!worldIn.isRemote && entityIn.isBurning() && i > 0 && entityIn.getEntityBoundingBox().minY <= (double)f) {
-            entityIn.extinguish();
-            this.setWaterLevel(worldIn, pos, state, i - 1);
-        }
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(this);
+    }
 
+    public int quantityDropped(IBlockState state, int fortune, Random random) {
+        return 1;
     }
 
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
