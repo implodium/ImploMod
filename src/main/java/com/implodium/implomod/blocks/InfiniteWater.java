@@ -173,11 +173,11 @@ public class InfiniteWater extends Block {
                         worldIn.playSound((EntityPlayer)null, pos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0F, 1.0F);
                         this.setWaterLevel(worldIn, pos, state, i + 1);
                     }
-                        return true;
-                    } else {
-                        return false;
-                    }
+                    return true;
+                } else {
+                    return false;
                 }
+            }
 
         }
     }
@@ -185,19 +185,6 @@ public class InfiniteWater extends Block {
     public void setWaterLevel(World worldIn, BlockPos pos, IBlockState state, int level) {
         worldIn.setBlockState(pos, state.withProperty(LEVEL, MathHelper.clamp(level, 0, 3)), 2);
         worldIn.updateComparatorOutputLevel(pos, this);
-    }
-
-    public void fillWithRain(World worldIn, BlockPos pos) {
-        if (worldIn.rand.nextInt(20) == 1) {
-            float f = worldIn.getBiome(pos).getTemperature(pos);
-            if (worldIn.getBiomeProvider().getTemperatureAtHeight(f, pos.getY()) >= 0.15F) {
-                IBlockState iblockstate = worldIn.getBlockState(pos);
-                if ((Integer)iblockstate.getValue(LEVEL) < 3) {
-                    worldIn.setBlockState(pos, iblockstate.cycleProperty(LEVEL), 2);
-                }
-            }
-        }
-
     }
 
     public boolean hasComparatorInputOverride(IBlockState state) {
@@ -221,4 +208,3 @@ public class InfiniteWater extends Block {
     }
 
 }
-
