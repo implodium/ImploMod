@@ -60,7 +60,7 @@ public class ImploMod {
 
         ModelResourceLocation modelResourceLocation = new ModelResourceLocation(
                 ImploConstants.MODID + ":" + block.getRegistryName(),
-                "inventory"
+                "normal"
         );
 
         ModelLoader.setCustomModelResourceLocation(itemBlock, 0, modelResourceLocation);
