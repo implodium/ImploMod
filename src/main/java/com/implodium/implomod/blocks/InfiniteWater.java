@@ -9,7 +9,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class InfiniteWater extends Block {
     public static final String NAME = "infinite_water";
-    private static final String UNLOCALIZED_NAME = "infinite_water_x";
+    private static final String UNLOCALIZED_NAME = "infinite_water";
     private static final String REGISTRY_NAME = "infinite_water";
 
     public InfiniteWater() {
@@ -22,6 +22,6 @@ public class InfiniteWater extends Block {
 
     @SideOnly(value = Side.CLIENT)
     public BlockRenderLayer getBlockLayer() {
-        return BlockRenderLayer.SOLID;
+        return BlockRenderLayer.TRANSLUCENT;
     }
 }
