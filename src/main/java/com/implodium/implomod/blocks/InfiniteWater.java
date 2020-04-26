@@ -51,7 +51,7 @@ public class InfiniteWater extends Block {
 
     @SideOnly(value = Side.CLIENT)
     public BlockRenderLayer getBlockLayer() {
-        return BlockRenderLayer.TRANSLUCENT;
+        return BlockRenderLayer.CUTOUT_MIPPED;
     }
 
     @Override
