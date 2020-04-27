@@ -1,4 +1,4 @@
-package com.implodium.implomod;
+package com.implodium.implomod.util;
 
 public class ImploConstants {
 

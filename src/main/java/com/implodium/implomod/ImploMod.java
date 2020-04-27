@@ -2,6 +2,7 @@ package com.implodium.implomod;
 
 import com.implodium.implomod.blocks.InfiniteWater;
 import com.implodium.implomod.proxy.CommonProxy;
+import com.implodium.implomod.util.ImploConstants;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -31,12 +32,11 @@ public class ImploMod {
     }
 
     @SidedProxy(serverSide = "com.implodium.implomod.proxy.CommonProxy", clientSide = "com.implodium.implomod.proxy.ClientProxy")
-    private static CommonProxy proxy;
+    public static CommonProxy proxy;
 
     @EventHandler
     public void preinit(FMLPreInitializationEvent event) {
         proxy.preinit(event);
-        preInitBlock(new InfiniteWater());
     }
 
     @EventHandler
@@ -49,20 +49,4 @@ public class ImploMod {
         proxy.postinit(event);
     }
 
-    private void preInitBlock(Block block) {
-        blocks.put("infinite_water", block);
-        ForgeRegistries.BLOCKS.register(blocks.get("infinite_water"));
-
-        ItemBlock itemBlock = new ItemBlock(block);
-        items.put("infinite_water", itemBlock);
-        itemBlock.setRegistryName(Objects.requireNonNull(block.getRegistryName()));
-        ForgeRegistries.ITEMS.register(itemBlock);
-
-        ModelResourceLocation modelResourceLocation = new ModelResourceLocation(
-                block.getRegistryName(),
-                "inventory"
-        );
-
-        ModelLoader.setCustomModelResourceLocation(itemBlock, 0, modelResourceLocation);
-    }
 }

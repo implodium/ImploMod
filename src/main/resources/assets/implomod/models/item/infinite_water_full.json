@@ -1,0 +1,6 @@
+{
+    "parent": "implomod:block/infinite_water2",
+    "textures": {
+        "layer0": "implomod:block/infinite_water"
+    }
+}
