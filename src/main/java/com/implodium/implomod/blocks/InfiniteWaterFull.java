@@ -124,7 +124,7 @@ public class InfiniteWaterFull extends BlockBase {
     }
 
     public int getComparatorInputOverride(IBlockState blockState, World worldIn, BlockPos pos) {
-        return (Integer)blockState.getValue(LEVEL);
+        return 2;
     }
 
     public IBlockState getStateFromMeta(int meta) {

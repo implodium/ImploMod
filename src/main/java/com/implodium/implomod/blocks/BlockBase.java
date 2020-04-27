@@ -6,12 +6,16 @@ import com.implodium.implomod.init.ModItems;
 import com.implodium.implomod.util.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.world.Explosion;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import java.util.Random;
 
 public class BlockBase extends Block implements IHasModel
 {
@@ -32,4 +36,11 @@ public class BlockBase extends Block implements IHasModel
         ImploMod.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
     }
 
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
+    }
+
+    public boolean canDropFromExplosion(Explosion explosionIn) {
+        return true;
+    }
 }

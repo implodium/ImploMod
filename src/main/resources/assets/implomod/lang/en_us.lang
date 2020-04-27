@@ -4,4 +4,6 @@ language.code=en_us
 
 tile.infinite_water.name=Infinite Water Block
 tile.infinite_water_full.name=Infinite Water Block (Full)
+tile.refined_obsidian.name=Refined Obsidian
+
 item.implo_shard.name= Implo Shard

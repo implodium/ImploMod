@@ -1,6 +1,7 @@
 package com.implodium.implomod.blocks;
 
 import com.implodium.implomod.init.ModBlocks;
+import com.implodium.implomod.init.ModItems;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
@@ -57,16 +58,21 @@ public class InfiniteWater extends BlockBase {
         return EnumBlockRenderType.MODEL;
     }
 
+    @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return Item.getItemFromBlock(ModBlocks.INFINITE_WATER_FULL);
-    }
+        if (state.getValue(LEVEL) != 2) {
+            return Item.getItemFromBlock(ModBlocks.INFINITE_WATER);
+        } else {
+            return Item.getItemFromBlock(ModBlocks.INFINITE_WATER_FULL);
+        }
 
+    }
     public int quantityDropped(IBlockState state, int fortune, Random random) {
         return 1;
     }
 
     // onRightClick
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+    public boolean onBlockActivated(World worldIn, int y, int j, int k,BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         ItemStack itemstack = playerIn.getHeldItem(hand);
 
         // fill until full
@@ -179,7 +185,9 @@ public class InfiniteWater extends BlockBase {
             }
 
         }
+
     }
+
 
     public void setWaterLevel(World worldIn, BlockPos pos, IBlockState state, int level) {
         worldIn.setBlockState(pos, state.withProperty(LEVEL, MathHelper.clamp(level, 0, 3)), 2);

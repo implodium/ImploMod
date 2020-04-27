@@ -1,0 +1,6 @@
+{
+    "parent": "implomod:block/refined_obsidian",
+    "textures": {
+        "layer0": "implomod:block/refined_obsidian"
+    }
+}
