@@ -7,3 +7,5 @@ tile.infinite_water_full.name=Infinite Water Block (Full)
 tile.refined_obsidian.name=Refined Obsidian
 
 item.implo_shard.name= Implo Shard
+item.refined_gold_ingot.name= Refined Gold Ingot
+item.refined_iron_ingot.name= Refined Iron Ingot

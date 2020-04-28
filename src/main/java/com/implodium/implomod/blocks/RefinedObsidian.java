@@ -39,10 +39,10 @@ public class RefinedObsidian extends BlockBase {
             playerIn.dropItem(new ItemStack(ModItems.IMPLO_SHARD, 4), false);
         } else if (item == Items.GOLD_INGOT) {
             playerIn.inventory.decrStackSize(playerIn.inventory.currentItem, 1);
-            playerIn.dropItem(new ItemStack(ModItems.IMPLO_SHARD, 2), false);
+            playerIn.dropItem(new ItemStack(ModItems.REFINED_GOLD, 2), false);
         } else if (item == Items.IRON_INGOT) {
             playerIn.inventory.decrStackSize(playerIn.inventory.currentItem, 1);
-            playerIn.dropItem(new ItemStack(ModItems.IMPLO_SHARD, 1), false);
+            playerIn.dropItem(new ItemStack(ModItems.REFINED_IRON, 1), false);
         }
     }
 
