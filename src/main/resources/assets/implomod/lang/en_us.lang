@@ -5,6 +5,7 @@ language.code=en_us
 tile.infinite_water.name=Infinite Water Block
 tile.infinite_water_full.name=Infinite Water Block (Full)
 tile.refined_obsidian.name=Refined Obsidian
+tile.refined_crafting_table.name=Refined Crafting Table
 
 item.implo_shard.name= Implo Shard
 item.refined_gold_ingot.name= Refined Gold Ingot

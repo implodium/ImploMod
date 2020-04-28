@@ -1,0 +1,6 @@
+{
+    "parent": "implomod:block/refined_crafting_table",
+    "textures": {
+        "layer0": "implomod:block/refined_crafting_table"
+    }
+}
