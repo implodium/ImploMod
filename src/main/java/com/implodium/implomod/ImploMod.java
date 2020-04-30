@@ -2,9 +2,11 @@ package com.implodium.implomod;
 
 import com.implodium.implomod.blocks.InfiniteWater;
 import com.implodium.implomod.proxy.CommonProxy;
+import com.implodium.implomod.tabs.ImploTab;
 import com.implodium.implomod.util.ImploConstants;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.model.ModelLoader;
@@ -21,6 +23,7 @@ import java.util.Objects;
 
 @Mod(modid = ImploConstants.MODID, name = ImploConstants.NAME, version = ImploConstants.VERSION)
 public class ImploMod {
+    public static final CreativeTabs implotab = new ImploTab("implotab");
     public static HashMap<String, Block> blocks = new HashMap<>();
     public static HashMap<String, Item> items = new HashMap<>();
 
@@ -48,5 +51,4 @@ public class ImploMod {
     public void postinit(FMLPostInitializationEvent event) {
         proxy.postinit(event);
     }
-
 }

@@ -23,7 +23,7 @@ public class BlockBase extends Block implements IHasModel
         super(material);
         setUnlocalizedName(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.BREWING);
+        setCreativeTab(ImploMod.implotab);
 
 
         ModBlocks.BLOCKS.add(this);
