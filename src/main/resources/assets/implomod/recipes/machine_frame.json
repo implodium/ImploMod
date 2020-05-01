@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IRI",
+    "RSR",
+    "IRI"
+  ],
+  "key": {
+    "S":{
+      "item": "implomod:implo_shard"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "I": {
+      "item": "implomod:refined_iron_ingot"
+    }
+  },
+  "result": {
+    "item": "implomod:machine_frame",
+    "count": 2
+  }
+}

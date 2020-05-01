@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  R",
+    " G ",
+    "R  "
+  ],
+  "key": {
+    "R":{
+      "item": "minecraft:redstone"
+    },
+    "G": {
+      "item": "implomod:refined_gold_ingot"
+    }
+  },
+  "result": {
+    "item": "implomod:rf_transmitter",
+    "count": 1
+  }
+}

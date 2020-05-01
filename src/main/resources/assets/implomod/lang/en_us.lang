@@ -11,5 +11,6 @@ tile.machine_frame.name=Machine Frame
 item.implo_shard.name= Implo Shard
 item.refined_gold_ingot.name= Refined Gold Ingot
 item.refined_iron_ingot.name= Refined Iron Ingot
+item.rf_transmitter.name= RF Transmitter
 
 itemGroup.implotab=Implodium Mod
