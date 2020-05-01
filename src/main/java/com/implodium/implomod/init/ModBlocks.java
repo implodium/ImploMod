@@ -18,5 +18,6 @@ public class ModBlocks
     public static final Block REFINED_OBSIDIAN = new RefinedObsidian("refined_obsidian", Material.IRON);
     public static final Block REFINED_CRAFTING_TABLE = new RefinedCraftingTable("refined_crafting_table", Material.WOOD);
     public static final Block MACHINE_FRAME = new MachineFrame("machine_frame", Material.IRON);
+    public static final Block BASIC_ENERGY_CELL = new BasicEnergyCell("basic_energy_cell", Material.IRON);
 
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "implomod:block/basic_energy_cell",
+  "textures": {
+    "layer0": "implomod:block/basic_energy_cell"
+  }
+}

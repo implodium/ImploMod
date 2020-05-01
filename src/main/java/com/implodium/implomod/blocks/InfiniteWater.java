@@ -72,7 +72,7 @@ public class InfiniteWater extends BlockBase {
     }
 
     // onRightClick
-    public boolean onBlockActivated(World worldIn, int y, int j, int k,BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         ItemStack itemstack = playerIn.getHeldItem(hand);
 
         // fill until full
@@ -190,7 +190,7 @@ public class InfiniteWater extends BlockBase {
 
 
     public void setWaterLevel(World worldIn, BlockPos pos, IBlockState state, int level) {
-        worldIn.setBlockState(pos, state.withProperty(LEVEL, MathHelper.clamp(level, 0, 3)), 2);
+        worldIn.setBlockState(pos, state.withProperty(LEVEL, MathHelper.clamp(level, 0, 2)), 2);
         worldIn.updateComparatorOutputLevel(pos, this);
     }
 

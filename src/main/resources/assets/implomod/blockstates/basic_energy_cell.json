@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "implomod:basic_energy_cell" }
+    }
+}
