@@ -1,7 +1,6 @@
 package com.implodium.implomod.blocks;
 
 import com.implodium.implomod.init.ModBlocks;
-import com.implodium.implomod.init.ModItems;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;

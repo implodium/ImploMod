@@ -4,7 +4,6 @@ import com.implodium.implomod.blocks.*;
 import com.implodium.implomod.blocks.MachineFrame;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 
 import java.util.List;
 import java.util.ArrayList;
