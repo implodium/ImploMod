@@ -5,8 +5,11 @@ import com.implodium.implomod.proxy.CommonProxy;
 import com.implodium.implomod.tabs.ImploTab;
 import com.implodium.implomod.util.ImploConstants;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockAir;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.model.ModelLoader;
@@ -37,6 +40,7 @@ public class ImploMod {
     @SidedProxy(serverSide = "com.implodium.implomod.proxy.CommonProxy", clientSide = "com.implodium.implomod.proxy.ClientProxy")
     public static CommonProxy proxy;
 
+
     @EventHandler
     public void preinit(FMLPreInitializationEvent event) {
         proxy.preinit(event);
@@ -50,5 +54,6 @@ public class ImploMod {
     @EventHandler
     public void postinit(FMLPostInitializationEvent event) {
         proxy.postinit(event);
+
     }
 }
