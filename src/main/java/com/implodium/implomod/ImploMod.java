@@ -44,6 +44,10 @@ public class ImploMod {
     @EventHandler
     public void preinit(FMLPreInitializationEvent event) {
         proxy.preinit(event);
+        /*    ----> slippymod code
+        for(int i = 1; i < 256; i++) {
+            Block.getBlockById(i).setDefaultSlipperiness(1.07F);
+        }*/
     }
 
     @EventHandler
